@@ -32,6 +32,7 @@ body {
   padding: 1rem;
 }
 
+
 .card-resumo {
   border-radius: 16px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -170,6 +171,14 @@ body {
   border-radius: 10%;
 }
 
+.img-destaque {
+  max-width: 50%;
+  height: auto;
+  border-radius: 10%;
+  /* filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.3)); */
+  /* z-index: 999; */
+}
+
 /* Redes sociais flutuantes */
 .floating-social {
   margin: 20px auto;
@@ -240,6 +249,12 @@ body {
   border-radius: 20px;
 }
 
+
+.text-top {
+  max-width: 250px;
+  margin: 0 auto;
+  text-align: justify;
+}
 
 
 /* Botão flutuante */
