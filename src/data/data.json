@@ -1,0 +1,104 @@
+{
+    "resumos": [
+        {
+            "label": "resumo_anatomia",
+            "title": "Resumo Anatomia",
+            "price_from": 9.99,
+            "price": 5.99,
+            "description": "Resumo completo de Anatomia para revisões rápidas.",
+            "category": "anatomia",
+            "color": "#FF5733",
+            "image": "src/media/resumos/resumo_anatomia.jpeg"
+        },
+        {
+            "label": "resumo_bioquimica",
+            "title": "Resumo Bioquímica",
+            "price_from": 9.99,
+            "price": 5.99,
+            "description": "Bioquímica descomplicada com foco em aplicações clínicas.",
+            "category": "bioquimica",
+            "color": "#FF5733",
+            "image": "src/media/resumos/resumo_bioquimica.jpeg"
+        },
+        {
+            "label": "resumo_carboidratos",
+            "title": "Resumo Carboidratos",
+            "price_from": 9.99,
+            "price": 5.99,
+            "description": "Entenda tudo sobre carboidratos de forma clara.",
+            "category": "nutrientes",
+            "color": "#FF5733",
+            "image": "src/media/resumos/resumo_carboidratos.jpeg"
+        },
+        {
+            "label": "resumo_citologia",
+            "title": "Resumo Citologia",
+            "price_from": 9.99,
+            "price": 5.99,
+            "description": "Principais conceitos da biologia celular.",
+            "category": "biologia",
+            "color": "#FF5733",
+            "image": "src/media/resumos/resumo_citologia.jpeg"
+        },
+        {
+            "label": "resumo_dietoterapia",
+            "title": "Resumo Dietoterapia",
+            "price_from": 9.99,
+            "price": 5.99,
+            "description": "Abordagem prática sobre dietoterapia.",
+            "category": "dietoterapia",
+            "color": "#FF5733",
+            "image": "src/media/resumos/resumo_dietoterapia.jpeg"
+        },
+        {
+            "label": "resumo_fisiologia",
+            "title": "Resumo Fisiologia",
+            "price_from": 9.99,
+            "price": 5.99,
+            "description": "Resumo objetivo com os principais sistemas.",
+            "category": "fisiologia",
+            "color": "#FF5733",
+            "image": "src/media/resumos/resumo_fisiologia.jpeg"
+        },
+        {
+            "label": "resumo_genetica",
+            "title": "Resumo Genética",
+            "price_from": 9.99,
+            "price": 5.99,
+            "description": "Fundamentos de genética e hereditariedade.",
+            "category": "genetica",
+            "color": "#FF5733",
+            "image": "src/media/resumos/resumo_genetica.jpeg"
+        },
+        {
+            "label": "resumo_lipidios",
+            "title": "Resumo Lipídios",
+            "price_from": 9.99,
+            "price": 5.99,
+            "description": "Tudo sobre lipídios em um só resumo.",
+            "category": "nutrientes",
+            "color": "#FF5733",
+            "image": "src/media/resumos/resumo_lipidios.jpeg"
+        },
+        {
+            "label": "resumo_proteinas",
+            "title": "Resumo Proteínas",
+            "price_from": 9.99,
+            "price": 5.99,
+            "description": "Resumo direto sobre proteínas e suas funções.",
+            "category": "nutrientes",
+            "color": "#FF5733",
+            "image": "src/media/resumos/resumo_proteinas.jpeg"
+        },
+        {
+            "label": "resumo_vitaminas",
+            "title": "Resumo Vitaminas",
+            "price_from": 9.99,
+            "price": 5.99,
+            "description": "Todas as vitaminas organizadas em um resumo visual.",
+            "category": "nutrientes",
+            "color": "#FF5733",
+            "image": "src/media/resumos/resumo_vitaminas.jpeg"
+        }
+    ]
+}
