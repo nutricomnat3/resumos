@@ -92,8 +92,7 @@ function finalizarPedido() {
     total += resumo.price;
     
   });
-  console.log(mensagem)
-
+  
   mensagem += `%0A`;
   mensagem += `Total: R$ ${total.toFixed(2)}`;
   mensagem += `%0A`;
@@ -103,11 +102,14 @@ function finalizarPedido() {
   mensagem += `Envie a mensagem *"Quero fazer o pedido"*`;
   mensagem += `%0A`;
   mensagem += `que enviarei a chave Pix`;
+  
+  console.log(mensagem)
+  alert(mensagem)
 
   const numero = "5581995101122";
   const url = `https://wa.me/${numero}?text=${mensagem}`;
 
-  window.open(url, '_blank');
+  // window.open(url, '_blank');
 }
 
 
