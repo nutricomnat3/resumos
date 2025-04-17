@@ -119,7 +119,7 @@ body {
   margin-bottom: 2rem;
 }
 .top-logo img {
-  max-width: 160px;
+  max-width: 120px;
   height: auto;
 }
 
@@ -134,14 +134,14 @@ body {
   color: #444;
   text-align: center;
 }
-.section-info p {
+/* .section-info p {
   font-size: 1rem;
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
   color: #555;
   line-height: 1.6;
-}
+} */
 
 @media (max-width: 768px) {
   .card-title {
@@ -210,7 +210,7 @@ body {
   color: #1BA553;
 }
 
-/* ✅ FINAL da página bonitinho e colado no fim */
+
 .container-fim {
   width: 100%;
   background-color: #fff;

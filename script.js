@@ -11,6 +11,7 @@ function renderResumos(resumos) {
   resumos.forEach(resumo => {
     const col = document.createElement("div");
     col.className = "col-12 col-md-6 col-lg-4";
+    // col.className = "col-6";
 
     const card = document.createElement("div");
     card.className = "card-resumo";
@@ -24,7 +25,7 @@ function renderResumos(resumos) {
           <span class="price-to">Por: R$ ${resumo.price.toFixed(2)}</span>
         </p>
         <div class="form-check">
-          <input class="form-check-input resumo-check" type="checkbox" value="${resumo.label}" data-price="${resumo.price}" id="${resumo.label}">
+          <input class="form-check-input resumo-check" type="checkbox" value="${resumo.label}" data-price="${resumo.price}" data-title="${resumo.title}" id="${resumo.label}">
           <label class="form-check-label" for="${resumo.label}">Selecionar</label>
         </div>
       </div>
@@ -47,8 +48,10 @@ function updateTotal() {
   inputs.forEach(input => {
     if (input.checked) {
       total += parseFloat(input.dataset.price);
+      // console.log(input.dataset)
       selectedResumos.push({
         label: input.value,
+        title: input.dataset.title,
         price: parseFloat(input.dataset.price)
       });
     }
@@ -58,20 +61,49 @@ function updateTotal() {
 }
 
 function finalizarPedido() {
+  let saudacao;
+  let mensagem = "";
+  let total = 0;
+  const agora = new Date();
+  const hora = agora.getHours();
+
   if (selectedResumos.length === 0) {
     alert("Selecione pelo menos um resumo!");
     return;
   }
 
-  let mensagem = "Olá! Gostaria de comprar os seguintes resumos:%0A";
-  let total = 0;
+  if (hora >= 5 && hora < 12) {
+    saudacao = "Bom dia!";
+  } else if (hora >= 12 && hora < 18) {
+    saudacao = "Boa tarde!";
+  } else {
+    saudacao = "Boa noite!";
+  }
 
+  mensagem = `${saudacao}`;
+  mensagem += `%0A`;
+  mensagem += `%0A`;
+  mensagem += `Gostaria de comprar os seguintes resumos:`;
+  mensagem += `%0A`;
+  
   selectedResumos.forEach(resumo => {
-    mensagem += `- ${resumo.title} (R$ ${resumo.price.toFixed(2)})%0A`;
+    mensagem += `- *${resumo.title}* - R$ ${resumo.price.toFixed(2)}`;
+    mensagem += `%0A`;
     total += resumo.price;
+    
   });
+  console.log(mensagem)
 
-  mensagem += `%0ATotal: R$ ${total.toFixed(2)}`;
+  mensagem += `%0A`;
+  mensagem += `Total: R$ ${total.toFixed(2)}`;
+  mensagem += `%0A`;
+  mensagem += `%0A`;
+  mensagem += `Ficou interessado, e já quer fazer o pedido?`;
+  mensagem += `%0A`;
+  mensagem += `Envie a mensagem *"Quero fazer o pedido"*`;
+  mensagem += `%0A`;
+  mensagem += `que enviarei a chave Pix`;
+
   const numero = "5581995101122";
   const url = `https://wa.me/${numero}?text=${mensagem}`;
 
