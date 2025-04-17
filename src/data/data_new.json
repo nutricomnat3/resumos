@@ -1,0 +1,169 @@
+{
+    "resumos": [
+        {
+            "title": "Dietoterapia",
+            "description": "Principais conceitos, estratégias terapêuticas e doenças com abordagem dietoterápica. Um resumo direto e objetivo para revisar os fundamentos da intervenção nutricional em diferentes condições clínicas.",
+            "price_from": 29.9,
+            "price_to": 12.9,
+            "category": "dietoterapia",
+            "color": "#80B0CE",
+            "image": "src/media/resumos/resumo_dietoterapia.png",
+            "": false,
+            "label": "resumo-dietoterapia"
+        },
+        {
+            "title": "Introdução à Nutrição",
+            "description": "Essa apostila ilustrada e objetiva traz os principais temas que todo estudante precisa dominar: nutrientes, metabolismo, vitaminas, tipos de alimentos e muito mais — tudo em apenas 17 páginas organizadas e práticas.",
+            "price_from": 19.99,
+            "price_to": 11.9,
+            "category": "nutricao",
+            "color": "#CF7982",
+            "image": "src/media/resumos/resumo_introducao_a_nutricao.jpg",
+            "": "",
+            "label": "resumo-introducao-a-nutricao"
+        },
+        {
+            "title": "Anatomia",
+            "description": "Apostila completa sobre os sistemas do corpo humano, seus componentes e funções, com imagens perfeitas para potencializar os seus estudos.",
+            "price_from": 19.99,
+            "price_to": 11.9,
+            "category": "anatomia",
+            "color": "#05B93D",
+            "image": "src/media/resumos/resumo_anatomia.jpg",
+            "": "",
+            "label": "resumo-anatomia"
+        },
+        {
+            "title": "Lípideos",
+            "description": "Entenda os lipídeos de uma vez só! Resumo completo sobre suas funções, metabolismo, digestão, os seus tipos e muito mais!",
+            "price_from": 15.9,
+            "price_to": 5.9,
+            "category": "lipideos",
+            "color": "#B74545",
+            "image": "src/media/resumos/resumo_lipidios.png",
+            "": "",
+            "label": "resumo-lipideos"
+        },
+        {
+            "title": "Carboidratos",
+            "description": "Entenda de uma vez só Resumo completo sobre Carboidratos! Suas funções, metabolismo, digestão, os seus tipos e muito mais.",
+            "price_from": 15.9,
+            "price_to": 5.9,
+            "category": "carboidratos",
+            "color": "#B74545",
+            "image": "src/media/resumos/resumo_carboidratos.png",
+            "": "",
+            "label": "resumo-carboidratos"
+        },
+        {
+            "title": "Proteínas",
+            "description": "Proteínas de uma forma muito mais fácil de aprender! Resumo completo sobre suas funções, metabolismo, digestão, os seus tipos e muito mais.",
+            "price_from": 15.9,
+            "price_to": 5.9,
+            "category": "proteinas",
+            "color": "#B74545",
+            "image": "src/media/resumos/resumo_proteinas.png",
+            "": "",
+            "label": "resumo-proteinas"
+        },
+        {
+            "title": "Vitaminas",
+            "description": "Vitaminas de uma forma incrível! Introdução, definição, funções, fontes, deficiências, toxidades, interações e muito mais.",
+            "price_from": 15.9,
+            "price_to": 5.9,
+            "category": "vitaminas",
+            "color": "#EF5B5B",
+            "image": "src/media/resumos/resumo_vitaminas.jpg",
+            "": "",
+            "label": "resumo-vitaminas"
+        },
+        {
+            "title": "Citologia",
+            "description": "A Citologia resumida da melhor forma! Entenda citologia de uma vez por todas.",
+            "price_from": 19.9,
+            "price_to": 9.9,
+            "category": "citologia",
+            "color": "#6392A6",
+            "image": "src/media/resumos/resumo_citologia.png",
+            "": "",
+            "label": "resumo-citologia"
+        },
+        {
+            "title": "Fisiologia",
+            "description": "Entende uma vez por todas à Introdução de Fisiologia e Sistema Nervoso.",
+            "price_from": 19.9,
+            "price_to": 9.9,
+            "category": "fisiologia",
+            "color": "#F9954F",
+            "image": "src/media/resumos/resumo_fisiologia.png",
+            "": "",
+            "label": "resumo-fisiologia"
+        },
+        {
+            "title": "Genética",
+            "description": "Entenda sobre os genes, cromossomos, DNA, RNA e tudo que é de mais importante na genética Humana!",
+            "price_from": 19.9,
+            "price_to": 9.9,
+            "category": "genetica",
+            "color": "#F0829A",
+            "image": "src/media/resumos/resumo_genetica.png",
+            "": "",
+            "label": "resumo-genetica"
+        },
+        {
+            "title": "Caderno de Questões de Embriologia",
+            "description": "Aprenda praticando a Embriologia com +20 questões sobre o assunto!",
+            "price_from": 19.9,
+            "price_to": 8.9,
+            "category": "embriologia",
+            "color": "#834B64",
+            "image": "src/media/resumos/resumo_embriologia.png",
+            "": "",
+            "label": "resumo-caderno-de-questoes-de-embriologia"
+        },
+        {
+            "title": "Mapas Mentais de Bioquímica",
+            "description": "Já ficou um tempão parado tentando aprender bioquímica e não conseguiu? Você precisa dos meus mapas mentais! Entenda Ciclo de Krebs, Glicólise, Metabolismo, Digestão e muito mais!",
+            "price_from": 19.9,
+            "price_to": 9.9,
+            "category": "mapa_mentais",
+            "color": "#F05667",
+            "image": "src/media/resumos/mapas_bioquimica.png",
+            "": "",
+            "label": "resumo-mapas-mentais-de-bioquimica"
+        },
+        {
+            "title": "Combo todos os resumos",
+            "description": "Garanta todos os resumos disponíveis no site por um preço incrível!",
+            "price_from": 185.9,
+            "price_to": 69.9,
+            "category": "combo",
+            "color": "#329A3A",
+            "image": "src/media/resumos/combo_geral.png",
+            "": "",
+            "label": "resumo-combo-todos-os-resumos"
+        },
+        {
+            "title": "Combo Nutrição",
+            "description": "Tenha acesso aos resumos de Introdução à Nutrição, Proteínas,\nCarboidratos, Lípideos,\nVitaminas e Mapas Mentais de Bioquímica por um preço incrível!",
+            "price_from": 79.9,
+            "price_to": 29.99,
+            "category": "combo",
+            "color": "#88D8E1",
+            "image": "src/media/resumos/combo_nutricao.png",
+            "": "",
+            "label": "resumo-combo-nutricao"
+        },
+        {
+            "title": "Combo Saúde",
+            "description": "Tenha acesso aos resumos de citologia, fisiologia, anatomia, genética e\nembriologia por um preço incrível!",
+            "price_from": 79.9,
+            "price_to": 29.99,
+            "category": "combo",
+            "color": "#D24D4B",
+            "image": "src/media/resumos/combo_saude.png",
+            "": "",
+            "label": "resumo-combo-saude"
+        }
+    ]
+}

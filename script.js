@@ -21,10 +21,10 @@ function renderResumos(resumos) {
         <p class="card-text">${resumo.description}</p>
         <p class="card-price">
           <span class="price-from">De: <s>R$ ${resumo.price_from.toFixed(2)}</s></span><br>
-          <span class="price-to">Por: R$ ${resumo.price.toFixed(2)}</span>
+          <span class="price-to">Por: R$ ${resumo.price_to.toFixed(2)}</span>
         </p>
         <div class="form-check">
-          <input class="form-check-input resumo-check" type="checkbox" value="${resumo.label}" data-price="${resumo.price}" id="${resumo.label}">
+          <input class="form-check-input resumo-check" type="checkbox" value="${resumo.label}" data-price="${resumo.price_to}" id="${resumo.label}">
           <label class="form-check-label" for="${resumo.label}">Selecionar</label>
         </div>
       </div>
@@ -46,10 +46,10 @@ function updateTotal() {
 
   inputs.forEach(input => {
     if (input.checked) {
-      total += parseFloat(input.dataset.price);
+      total += parseFloat(input.dataset.price_to);
       selectedResumos.push({
         label: input.value,
-        price: parseFloat(input.dataset.price)
+        price: parseFloat(input.dataset.price_to)
       });
     }
   });
@@ -67,8 +67,8 @@ function finalizarPedido() {
   let total = 0;
 
   selectedResumos.forEach(resumo => {
-    mensagem += `- ${resumo.title} (R$ ${resumo.price.toFixed(2)})%0A`;
-    total += resumo.price;
+    mensagem += `- ${resumo.title} (R$ ${resumo.price_to.toFixed(2)})%0A`;
+    total += resumo.price_to;
   });
 
   mensagem += `%0ATotal: R$ ${total.toFixed(2)}`;

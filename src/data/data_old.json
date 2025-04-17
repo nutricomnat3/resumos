@@ -1,14 +1,14 @@
 {
     "resumos": [
         {
-            "label": "resumo_anatomia",
             "title": "Resumo Anatomia",
             "price_from": 9.99,
             "price": 5.99,
             "description": "Resumo completo de Anatomia para revisões rápidas.",
             "category": "anatomia",
             "color": "#FF5733",
-            "image": "src/media/resumos/resumo_anatomia.jpeg"
+            "image": "src/media/resumos/resumo_anatomia.jpeg",
+            "label": "resumo_anatomia"
         },
         {
             "label": "resumo_bioquimica",
