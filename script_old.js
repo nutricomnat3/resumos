@@ -134,8 +134,9 @@ document.getElementById('search-input').addEventListener('input', function (e) {
   const cards = document.querySelectorAll('#resumos-list .card-resumo');
 
   cards.forEach(card => {
-    const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
-    const visible = title.includes(searchValue);
+    const title = card.querySelector('.card-title').textContent.toLowerCase();
+    // const description = card.querySelector('.card-text').textContent.toLowerCase();
+    const visible = title.includes(searchValue) || description.includes(searchValue);
     card.parentElement.style.display = visible ? 'block' : 'none';
   });
 });
