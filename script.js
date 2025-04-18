@@ -101,12 +101,12 @@ function finalizarPedido() {
   mensagem += `Total: R$ ${total.toFixed(2)}`;
   mensagem += `%0A`;
   mensagem += `%0A`;
-  mensagem += `Ficou interessado, e já quer fazer o pedido?`;
+  mensagem += `Abaixo informe a forma de pagamento de sua preferência 😍🫶🏻:`;
   mensagem += `%0A`;
-  mensagem += `Envie a mensagem *"Quero fazer o pedido"*`;
+  mensagem += `- *Pix*`;
   mensagem += `%0A`;
-  mensagem += `que enviarei a chave Pix`;
-  
+  mensagem += `- *Cartão de crédito* (link de pagamento)`;
+
   const numero = "5581995101122";
   const url = `https://wa.me/${numero}?text=${mensagem}`;
   console.log(mensagem)
