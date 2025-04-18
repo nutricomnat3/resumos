@@ -109,7 +109,7 @@ function finalizarPedido() {
   console.log(mensagem)
   console.log(url)
 
-  // window.open(url, '_blank');
+  window.open(url, '_blank');
 }
 
 
