@@ -18,6 +18,8 @@ html, body {
   background-color: var(--background-color);
   font-family: var(--font-family);
   overflow-x: hidden; /* evita scroll lateral */
+  scroll-behavior: smooth;
+  
 }
 
 body {
@@ -144,25 +146,29 @@ body {
 } */
 
 @media (max-width: 768px) {
+
+  .card-body {
+    padding: 0.8rem;
+  }
+
   .card-title {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .card-price {
+    font-size: 0.9rem;
   }
 
   .card-price .price-to {
     font-size: 1rem;
   }
 
-  .btn-finalizar {
-    font-size: 1rem;
-  }
-
-  .section-info h2 {
-    font-size: 1.3rem;
-  }
-
-  .section-info p {
-    font-size: 0.95rem;
-    padding: 0 1rem;
+  .form-check-label {
+    font-size: 0.9rem;
   }
 }
 
@@ -276,4 +282,18 @@ body {
 /* Exibição visível */
 #finalizar-pedido.show {
   display: block;
+}
+
+
+/* Estilo da barra de pesquisa */
+.search-bar {
+  max-width: 400px;
+  margin: 0 auto 2rem;
+}
+
+.search-input {
+  border: 2px solid #28a745;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
 }
