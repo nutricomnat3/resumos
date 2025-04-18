@@ -1,11 +1,14 @@
 // script.js
 
 let selectedResumos = [];
+let resumosData = [];
 
 fetch("src/data/data.json")
   .then(response => response.json())
-  .then(data => renderResumos(data.resumos));
-
+  .then(data => {
+    resumosData = data.resumos; // <- armazena os dados
+    renderResumos(data.resumos);
+  });
 
 function renderResumos(resumos) {
   const container = document.getElementById("resumos-list");
@@ -134,7 +137,8 @@ document.getElementById('search-input').addEventListener('input', function (e) {
   const cards = document.querySelectorAll('#resumos-list .card-resumo');
 
   cards.forEach(card => {
-    const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
+    const title = card.querySelector('.card-title').textContent.toLowerCase();
+    // const description = card.querySelector('.card-text').textContent.toLowerCase();
     const visible = title.includes(searchValue);
     card.parentElement.style.display = visible ? 'block' : 'none';
   });
@@ -154,5 +158,45 @@ function abrirModal(titulo, descricao, precoDe, precoPor) {
   `;
 
   const modal = new bootstrap.Modal(document.getElementById('resumoModal'));
+  modal.show();
+}
+
+function mostrarResumoPedido() {
+  if (selectedResumos.length === 0) {
+    alert("Selecione pelo menos um resumo!");
+    return;
+  }
+
+  const modalTitle = document.getElementById("resumoResumoLabel");
+  const modalBody = document.getElementById("resumoResumoContent");
+
+  let totalDe = 0;
+  let totalPor = 0;
+  let html = "<ul class='list-unstyled'>";
+
+  selectedResumos.forEach(resumo => {
+    const resumoInfo = resumosData.find(r => r.label === resumo.label);
+    if (resumoInfo) {
+      totalDe += resumoInfo.price_from;
+      totalPor += resumoInfo.price;
+      html += `<li><strong>${resumo.title}</strong>: <s>R$ ${resumoInfo.price_from.toFixed(2)}</s> → R$ ${resumoInfo.price.toFixed(2)}</li>`;
+    }
+  });
+
+  html += "</ul>";
+
+  const desconto = totalDe - totalPor;
+
+  html += `<p class="mt-3"><strong>Desconto:</strong> R$ ${desconto.toFixed(2)}</p>`;
+  html += `<p><strong>Total:</strong> R$ ${totalPor.toFixed(2)}</p>`;
+  html += `<div class="d-flex justify-content-end gap-3 mt-4">
+    <button class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+    <button class="btn btn-success" onclick="finalizarPedido()">Finalizar Pedido no WhatsApp</button>
+  </div>`;
+
+  modalTitle.innerText = "Resumo do Pedido";
+  modalBody.innerHTML = html;
+
+  const modal = new bootstrap.Modal(document.getElementById('resumoResumoModal'));
   modal.show();
 }
