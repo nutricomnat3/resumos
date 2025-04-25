@@ -126,8 +126,8 @@
             "price_from": 185.9,
             "price": 69.9,
             "category": "combo",
-            "color": "#329A3A",
-            "image": "src/media/resumos/combo_geral.png",
+            "color": "#d4a055",
+            "image": "src/media/resumos/combo_geral.jpeg",
             "label": "resumo-combo-todos-os-resumos"
         },
         {
@@ -136,8 +136,8 @@
             "price_from": 79.9,
             "price": 29.99,
             "category": "combo",
-            "color": "#88D8E1",
-            "image": "src/media/resumos/combo_nutricao.png",
+            "color": "#91444b",
+            "image": "src/media/resumos/combo_nutricao.jpeg",
             "label": "resumo-combo-nutricao"
         },
         {
@@ -146,8 +146,8 @@
             "price_from": 79.9,
             "price": 29.99,
             "category": "combo",
-            "color": "#D24D4B",
-            "image": "src/media/resumos/combo_saude.png",
+            "color": "#48768a",
+            "image": "src/media/resumos/combo_saude.jpeg",
             "label": "resumo-combo-saude"
         }
     ]
