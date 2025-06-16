@@ -1,6 +1,16 @@
 {
     "resumos": [
         {
+            "title": "Guia - Como Dominar Nutrição de Verdade!",
+            "description": "A faculdade te dá a teoria, mas não te ensina a aplicar. Esse e-book é um guia prático com tudo o que você precisa para dominar a nutrição de verdade e ter mais segurança. São mais de 30 páginas direto ao ponto, com linguagem simples e ứtil! Vem dominar nutrição! ❤️",
+            "price_from": 39.90,
+            "price": 12.90,
+            "category": "dietoterapia",
+            "color": "#D4171D",
+            "image": "src/media/resumos/guia_dominarNutricao.jpeg",
+            "label": "guia-dominar-nutricao"
+        },
+        {
             "title": "Dietoterapia",
             "description": "Principais conceitos, estratégias terapêuticas e doenças com abordagem dietoterápica. Um resumo direto e objetivo para revisar os fundamentos da intervenção nutricional em diferentes condições clínicas.",
             "price_from": 29.90,
