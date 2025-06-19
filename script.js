@@ -72,6 +72,15 @@ function finalizarPedido() {
   const agora = new Date();
   const hora = agora.getHours();
 
+  let qtdParcelas = 1;
+  if (formaPagamento === "Cartão de Crédito") {
+    const inputParcelas = document.getElementById("qtdParcelas");
+    if (inputParcelas) {
+      qtdParcelas = parseInt(inputParcelas.value);
+    }
+  }
+
+
   if (selectedResumos.length === 0) {
     alert("Selecione pelo menos um resumo!");
     return;
@@ -109,7 +118,15 @@ function finalizarPedido() {
   // mensagem += `- *Cartão de crédito* (link de pagamento)`;
   mensagem += `%0A`;
   mensagem += `%0A`;
-  mensagem += `Forma de pagamento escolhida: *${formaPagamento}*`;
+  // mensagem += `Forma de pagamento escolhida: *${formaPagamento}*`;
+
+  if (formaPagamento === "Cartão de Crédito") {
+    mensagem += `Forma de pagamento escolhida: *${formaPagamento}* (${qtdParcelas}x)`;
+    // mensagem += `Número de parcelas: *${qtdParcelas}x*`;
+  } else {
+    mensagem += `Forma de pagamento escolhida: *${formaPagamento}*`;
+    
+  }
 
   const numero = "5581995101122";
   const url = `https://wa.me/${numero}?text=${mensagem}`;
@@ -206,6 +223,15 @@ function mostrarResumoPedido() {
       </div>
     </div>
   `;
+
+  html += `
+    <div class="mt-3" id="parcelas-container" style="display: none;">
+      <label for="qtdParcelas"><strong>Quantidade de Parcelas:</strong> <span id="valorParcelas">1</span>x</label>
+      <input type="range" class="form-range" min="1" max="10" value="1" id="qtdParcelas">
+    </div>
+  `;
+
+
   html += `<p>Ambas formas de pagamento, são através do Whatsapp</p>`
   html += `<div class="d-flex justify-content-end gap-3 mt-4">
     <button class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
@@ -217,4 +243,26 @@ function mostrarResumoPedido() {
 
   const modal = new bootstrap.Modal(document.getElementById('resumoResumoModal'));
   modal.show();
+
+  setTimeout(() => {
+    const radios = document.querySelectorAll('input[name="formaPagamento"]');
+    const containerParcelas = document.getElementById("parcelas-container");
+    const inputParcelas = document.getElementById("qtdParcelas");
+    const spanValor = document.getElementById("valorParcelas");
+
+    radios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        if (radio.value === "Cartão de Crédito" && radio.checked) {
+          containerParcelas.style.display = "block";
+        } else if (radio.value === "Pix" && radio.checked) {
+          containerParcelas.style.display = "none";
+        }
+      });
+    });
+
+    inputParcelas.addEventListener("input", () => {
+      spanValor.textContent = inputParcelas.value;
+    });
+  }, 100);
+
 }
