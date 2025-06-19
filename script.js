@@ -68,6 +68,7 @@ function finalizarPedido() {
   let saudacao;
   let mensagem = "";
   let total = 0;
+  const formaPagamento = document.querySelector('input[name="formaPagamento"]:checked')?.value || "não informado";
   const agora = new Date();
   const hora = agora.getHours();
 
@@ -102,10 +103,13 @@ function finalizarPedido() {
   mensagem += `%0A`;
   mensagem += `%0A`;
   mensagem += `Abaixo informe a forma de pagamento de sua preferência 😍🫶🏻:`;
+  // mensagem += `%0A`;
+  // mensagem += `- *Pix*`;
+  // mensagem += `%0A`;
+  // mensagem += `- *Cartão de crédito* (link de pagamento)`;
   mensagem += `%0A`;
-  mensagem += `- *Pix*`;
   mensagem += `%0A`;
-  mensagem += `- *Cartão de crédito* (link de pagamento)`;
+  mensagem += `Forma de pagamento escolhida: *${formaPagamento}*`;
 
   const numero = "5581995101122";
   const url = `https://wa.me/${numero}?text=${mensagem}`;
@@ -189,6 +193,20 @@ function mostrarResumoPedido() {
 
   html += `<p class="mt-3"><strong>Desconto:</strong> R$ ${desconto.toFixed(2)}</p>`;
   html += `<p><strong>Total:</strong> R$ ${totalPor.toFixed(2)}</p>`;
+  html += `
+    <div class="mt-3">
+      <label><strong>Forma de Pagamento:</strong></label><br>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="formaPagamento" id="pagamentoPix" value="Pix" checked>
+        <label class="form-check-label-payment" for="pagamentoPix">Pix</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="formaPagamento" id="pagamentoCartao" value="Cartão de Crédito">
+        <label class="form-check-label-payment" for="pagamentoCartao">Cartão de Crédito (Link de pagamento)</label>
+      </div>
+    </div>
+  `;
+  html += `<p>Ambas formas de pagamento, são através do Whatsapp</p>`
   html += `<div class="d-flex justify-content-end gap-3 mt-4">
     <button class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
     <button class="btn btn-success" onclick="finalizarPedido()">Finalizar Pedido no WhatsApp</button>

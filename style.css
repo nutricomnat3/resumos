@@ -91,6 +91,10 @@ body {
   color: #fff;
 }
 
+.form-check-label-payment {
+  color: #000000;
+}
+
 .btn-finalizar {
   width: 100%;
   padding: 0.75rem;
