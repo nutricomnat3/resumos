@@ -97,7 +97,7 @@ function finalizarPedido() {
   mensagem = `${saudacao}`;
   mensagem += `%0A`;
   mensagem += `%0A`;
-  mensagem += `Gostaria de comprar os seguintes resumos:`;
+  mensagem += `Gostaria de comprar os seguintes resumos ♥:`;
   mensagem += `%0A`;
   
   selectedResumos.forEach(resumo => {
@@ -111,13 +111,14 @@ function finalizarPedido() {
   mensagem += `Total: R$ ${total.toFixed(2)}`;
   mensagem += `%0A`;
   mensagem += `%0A`;
-  mensagem += `Abaixo informe a forma de pagamento de sua preferência 😍🫶🏻:`;
+
+  // mensagem += `Forma de pagamento escolhida:`;
   // mensagem += `%0A`;
   // mensagem += `- *Pix*`;
   // mensagem += `%0A`;
   // mensagem += `- *Cartão de crédito* (link de pagamento)`;
-  mensagem += `%0A`;
-  mensagem += `%0A`;
+  // mensagem += `%0A`;
+  // mensagem += `%0A`;
   // mensagem += `Forma de pagamento escolhida: *${formaPagamento}*`;
 
   if (formaPagamento === "Cartão de Crédito") {
@@ -125,15 +126,23 @@ function finalizarPedido() {
     // mensagem += `Número de parcelas: *${qtdParcelas}x*`;
   } else {
     mensagem += `Forma de pagamento escolhida: *${formaPagamento}*`;
-    
   }
-
+  mensagem += `%0A`;
+  mensagem += `%0A`;
+  mensagem += `Minhas redes sociais ♥:`;
+  mensagem += `%0A`;
+  mensagem += `*Instagram:* instagram.com/natalyamirandanutri`;
+  mensagem += `%0A`;
+  mensagem += `*TikTok:* tiktok.com/@nutricomnat`;
+  
   const numero = "5581995101122";
-  const url = `https://wa.me/${numero}?text=${mensagem}`;
+  // const url = `https://wa.me/${numero}?text=${mensagem}`;
+  const url = `https://api.whatsapp.com/send?phone=${numero}&text=${mensagem}`;
   console.log(mensagem)
   console.log(url)
 
-  window.open(url, '_blank');
+  // window.open(url, '_blank');
+  window.location.href = url;
 }
 
 
@@ -193,7 +202,13 @@ function mostrarResumoPedido() {
 
   let totalDe = 0;
   let totalPor = 0;
-  let html = "<ul class='list-unstyled'>";
+  // let html = "<ul class='list-unstyled'>";
+  let html = `
+    <div class="alert alert-warning text-start" role="alert">
+      ⚠️ Se estiver usando o navegador do Instagram e o WhatsApp não abrir, clique nos três pontinhos na parte superior e selecione <strong>"Abrir no navegador"</strong>.
+    </div>
+    <ul class='list-unstyled'>
+  `;
 
   selectedResumos.forEach(resumo => {
     const resumoInfo = resumosData.find(r => r.label === resumo.label);
