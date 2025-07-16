@@ -3,7 +3,7 @@
 let selectedResumos = [];
 let resumosData = [];
 
-console.log("NutriComNat - V.20250716")
+console.log("NutriComNat - V.20250716.2")
 
 fetch("src/data/data.json")
   .then(response => response.json())
@@ -110,17 +110,32 @@ function finalizarPedido() {
     
   });
 
+  // fetch('https://script.google.com/macros/s/AKfycbwkba73AWXeUp9B6bwzPNt6MjXvZZ9U9JsILa1ty9j29QCmvb2OljiVgkw5RO1ADyShng/exec', {
+  //   method: 'POST',
+  //   body: JSON.stringify({
+  //     total: total.toFixed(2),
+  //     pagamento: formaPagamento === "Cartão de Crédito" ? "CRÉDITO (LINK)" : "PIX",
+  //     secret: "nutriComNat@2025"
+  //   }),
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //   }
+  // });
+
   fetch('https://script.google.com/macros/s/AKfycbwkba73AWXeUp9B6bwzPNt6MjXvZZ9U9JsILa1ty9j29QCmvb2OljiVgkw5RO1ADyShng/exec', {
-    method: 'POST',
-    body: JSON.stringify({
-      total: total.toFixed(2),
-      pagamento: formaPagamento === "Cartão de Crédito" ? "CRÉDITO (LINK)" : "PIX",
-      secret: "nutriComNat@2025"
-    }),
-    headers: {
-      'Content-Type': 'application/json'
-    }
+      method: 'POST',
+      body: JSON.stringify({
+        total: total.toFixed(2),
+        pagamento: formaPagamento === "Cartão de Crédito" ? "CRÉDITO (LINK)" : "PIX",
+        secret: "nutriComNat@2025"
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+  }).catch(error => {
+    console.error("Erro ao registrar pedido na planilha:", error);
   });
+
 
   mensagem = `${saudacao}`;
   mensagem += `%0A`;
@@ -156,7 +171,7 @@ function finalizarPedido() {
 
   setTimeout(() => {
     window.location.href = url;
-  }, 300); // aguarda 300ms para garantir que o GA4 envie o evento
+  }, 2000); // aguarda 2000 para garantir que o GA4 envie o evento
 }
 
 
