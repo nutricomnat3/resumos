@@ -3,6 +3,8 @@
 let selectedResumos = [];
 let resumosData = [];
 
+console.log("NutriComNat - V.20250716")
+
 fetch("src/data/data.json")
   .then(response => response.json())
   .then(data => {
@@ -67,6 +69,7 @@ function updateTotal() {
 function finalizarPedido() {
   let saudacao;
   let mensagem = "";
+  let produtos = "";
   let total = 0;
   const formaPagamento = document.querySelector('input[name="formaPagamento"]:checked')?.value || "não informado";
   const agora = new Date();
@@ -77,19 +80,6 @@ function finalizarPedido() {
     'event_label': 'Botão Finalizar Pedido',
     'value': 1
   });
-
-  fetch('https://script.google.com/macros/s/AKfycbwkba73AWXeUp9B6bwzPNt6MjXvZZ9U9JsILa1ty9j29QCmvb2OljiVgkw5RO1ADyShng/exec', {
-    method: 'POST',
-    body: JSON.stringify({
-      total: total.toFixed(2),
-      pagamento: formaPagamento === "Cartão de Crédito" ? "CRÉDITO (LINK)" : "PIX",
-      secret: "nutriComNat@2025"
-    }),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  });
-
 
   let qtdParcelas = 1;
   if (formaPagamento === "Cartão de Crédito") {
@@ -113,33 +103,35 @@ function finalizarPedido() {
     saudacao = "Boa noite!";
   }
 
+  selectedResumos.forEach(resumo => {
+    produtos += `- *${resumo.title}* - R$ ${resumo.price.toFixed(2)}`;
+    produtos += `%0A`;
+    total += resumo.price;
+    
+  });
+
+  fetch('https://script.google.com/macros/s/AKfycbwkba73AWXeUp9B6bwzPNt6MjXvZZ9U9JsILa1ty9j29QCmvb2OljiVgkw5RO1ADyShng/exec', {
+    method: 'POST',
+    body: JSON.stringify({
+      total: total.toFixed(2),
+      pagamento: formaPagamento === "Cartão de Crédito" ? "CRÉDITO (LINK)" : "PIX",
+      secret: "nutriComNat@2025"
+    }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+
   mensagem = `${saudacao}`;
   mensagem += `%0A`;
   mensagem += `%0A`;
   mensagem += `Gostaria de comprar os seguintes resumos ♥:`;
   mensagem += `%0A`;
-  
-  selectedResumos.forEach(resumo => {
-    mensagem += `- *${resumo.title}* - R$ ${resumo.price.toFixed(2)}`;
-    mensagem += `%0A`;
-    total += resumo.price;
-    
-  });
-  
+  mensagem += produtos;
   mensagem += `%0A`;
   mensagem += `Total: R$ ${total.toFixed(2)}`;
   mensagem += `%0A`;
   mensagem += `%0A`;
-
-  // mensagem += `Forma de pagamento escolhida:`;
-  // mensagem += `%0A`;
-  // mensagem += `- *Pix*`;
-  // mensagem += `%0A`;
-  // mensagem += `- *Cartão de crédito* (link de pagamento)`;
-  // mensagem += `%0A`;
-  // mensagem += `%0A`;
-  // mensagem += `Forma de pagamento escolhida: *${formaPagamento}*`;
-
   if (formaPagamento === "Cartão de Crédito") {
     mensagem += `Forma de pagamento escolhida: *${formaPagamento}* (${qtdParcelas}x)`;
     // mensagem += `Número de parcelas: *${qtdParcelas}x*`;
@@ -155,13 +147,16 @@ function finalizarPedido() {
   mensagem += `*TikTok:* tiktok.com/@nutricomnat`;
   
   const numero = "5581995101122";
-  // const url = `https://wa.me/${numero}?text=${mensagem}`;
   const url = `https://api.whatsapp.com/send?phone=${numero}&text=${mensagem}`;
   console.log(mensagem)
   console.log(url)
 
   // window.open(url, '_blank');
-  window.location.href = url;
+  // window.location.href = url;
+
+  setTimeout(() => {
+    window.location.href = url;
+  }, 300); // aguarda 300ms para garantir que o GA4 envie o evento
 }
 
 
