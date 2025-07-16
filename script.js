@@ -72,6 +72,25 @@ function finalizarPedido() {
   const agora = new Date();
   const hora = agora.getHours();
 
+  gtag('event', 'clique_finalizar_pedido', {
+    'event_category': 'pedido',
+    'event_label': 'Botão Finalizar Pedido',
+    'value': 1
+  });
+
+  fetch('https://script.google.com/macros/s/AKfycbwkba73AWXeUp9B6bwzPNt6MjXvZZ9U9JsILa1ty9j29QCmvb2OljiVgkw5RO1ADyShng/exec', {
+    method: 'POST',
+    body: JSON.stringify({
+      total: total.toFixed(2),
+      pagamento: formaPagamento === "Cartão de Crédito" ? "CRÉDITO (LINK)" : "PIX",
+      secret: "nutriComNat@2025"
+    }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+
+
   let qtdParcelas = 1;
   if (formaPagamento === "Cartão de Crédito") {
     const inputParcelas = document.getElementById("qtdParcelas");
