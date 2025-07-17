@@ -3,7 +3,7 @@
 let selectedResumos = [];
 let resumosData = [];
 
-console.log("NutriComNat - V.20250716.2")
+console.log("NutriComNat - V.20250716.3")
 
 fetch("src/data/data.json")
   .then(response => response.json())
@@ -75,11 +75,13 @@ function finalizarPedido() {
   const agora = new Date();
   const hora = agora.getHours();
 
+  console.log("Start event GA4");
   gtag('event', 'clique_finalizar_pedido', {
     'event_category': 'pedido',
     'event_label': 'Botão Finalizar Pedido',
     'value': 1
   });
+  console.log("End event GA4");
 
   let qtdParcelas = 1;
   if (formaPagamento === "Cartão de Crédito") {
@@ -122,20 +124,21 @@ function finalizarPedido() {
   //   }
   // });
 
+  console.log("Start save to Google Sheets");
   fetch('https://script.google.com/macros/s/AKfycbwkba73AWXeUp9B6bwzPNt6MjXvZZ9U9JsILa1ty9j29QCmvb2OljiVgkw5RO1ADyShng/exec', {
-      method: 'POST',
-      body: JSON.stringify({
-        total: total.toFixed(2),
-        pagamento: formaPagamento === "Cartão de Crédito" ? "CRÉDITO (LINK)" : "PIX",
-        secret: "nutriComNat@2025"
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+    method: 'POST',
+    body: JSON.stringify({
+      total: total.toFixed(2),
+      pagamento: formaPagamento === "Cartão de Crédito" ? "CREDITO (LINK)" : "PIX",
+      secret: "nutriComNat@2025"
+    }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
   }).catch(error => {
     console.error("Erro ao registrar pedido na planilha:", error);
   });
-
+  console.log("End save to Google Sheets");
 
   mensagem = `${saudacao}`;
   mensagem += `%0A`;
@@ -171,7 +174,7 @@ function finalizarPedido() {
 
   setTimeout(() => {
     window.location.href = url;
-  }, 2000); // aguarda 2000 para garantir que o GA4 envie o evento
+  }, 10000); // aguarda 5000 para garantir que o GA4 envie o evento
 }
 
 
