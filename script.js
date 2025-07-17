@@ -3,7 +3,7 @@
 let selectedResumos = [];
 let resumosData = [];
 
-console.log("NutriComNat - V.20250716.3")
+console.log("NutriComNat - V.20250716.4")
 
 fetch("src/data/data.json")
   .then(response => response.json())
@@ -112,32 +112,37 @@ function finalizarPedido() {
     
   });
 
+
+  console.log("Start save to Google Sheets");
   // fetch('https://script.google.com/macros/s/AKfycbwkba73AWXeUp9B6bwzPNt6MjXvZZ9U9JsILa1ty9j29QCmvb2OljiVgkw5RO1ADyShng/exec', {
   //   method: 'POST',
   //   body: JSON.stringify({
   //     total: total.toFixed(2),
-  //     pagamento: formaPagamento === "Cartão de Crédito" ? "CRÉDITO (LINK)" : "PIX",
+  //     pagamento: formaPagamento === "Cartão de Crédito" ? "CREDITO (LINK)" : "PIX",
   //     secret: "nutriComNat@2025"
   //   }),
   //   headers: {
   //     'Content-Type': 'application/json'
   //   }
+  // }).catch(error => {
+  //   console.error("Erro ao registrar pedido na planilha:", error);
   // });
 
-  console.log("Start save to Google Sheets");
-  fetch('https://script.google.com/macros/s/AKfycbwkba73AWXeUp9B6bwzPNt6MjXvZZ9U9JsILa1ty9j29QCmvb2OljiVgkw5RO1ADyShng/exec', {
+  let resposta = fetch('https://back-resumos-nutri-com-7fdrfjihk-andre-costas-projects.vercel.app/api/enviar-pedido.js', {
     method: 'POST',
     body: JSON.stringify({
       total: total.toFixed(2),
       pagamento: formaPagamento === "Cartão de Crédito" ? "CREDITO (LINK)" : "PIX",
-      secret: "nutriComNat@2025"
+      pass: "nutriComNat"
     }),
     headers: {
       'Content-Type': 'application/json'
     }
-  }).catch(error => {
-    console.error("Erro ao registrar pedido na planilha:", error);
   });
+  console.log("Resposta do servidor:", resposta.text());
+
+
+
   console.log("End save to Google Sheets");
 
   mensagem = `${saudacao}`;
@@ -174,7 +179,7 @@ function finalizarPedido() {
 
   setTimeout(() => {
     window.location.href = url;
-  }, 10000); // aguarda 5000 para garantir que o GA4 envie o evento
+  }, 300); // aguarda 300 para garantir que o GA4 envie o evento
 }
 
 
