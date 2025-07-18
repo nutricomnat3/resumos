@@ -17,10 +17,10 @@ function onEdit(e) {
   }
 }
 
-
 function doPost(e) {
   const SECRET_KEY = "nutriComNat@2025"; // 🔒 Altere por uma chave segura
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  // const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Vendas");
   const data = JSON.parse(e.postData.contents);
 
   if (!data.secret || data.secret !== SECRET_KEY) {
@@ -28,11 +28,12 @@ function doPost(e) {
   }
 
   sheet.appendRow([
-    true,               // ✅ coluna do check
-    new Date(),         // 📅 data e hora do pedido
-    data.total || '',   // 💰 valor total
+    true,                 // ✅ coluna do check
+    new Date(),           // 📅 data e hora do pedido
+    data.total || '',     // 💰 valor total
     data.pagamento || '', // 💳 forma de pagamento formatada
-    'PENDENTE'          // ⏳ status inicial
+    'PENDENTE',           // ⏳ status inicial
+    'WEBHOOK'             // 💾 Chamada
   ]);
 
   return ContentService.createTextOutput("OK").setMimeType(ContentService.MimeType.TEXT);
