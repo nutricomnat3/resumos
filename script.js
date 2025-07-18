@@ -114,21 +114,21 @@ function finalizarPedido() {
 
 
   console.log("Start save to Google Sheets");
-  // fetch('https://script.google.com/macros/s/AKfycbwkba73AWXeUp9B6bwzPNt6MjXvZZ9U9JsILa1ty9j29QCmvb2OljiVgkw5RO1ADyShng/exec', {
+
+
+  // fetch('https://back-resumos-nutri-com-nat.vercel.app/', {
   //   method: 'POST',
   //   body: JSON.stringify({
   //     total: total.toFixed(2),
   //     pagamento: formaPagamento === "Cartão de Crédito" ? "CREDITO (LINK)" : "PIX",
-  //     secret: "nutriComNat@2025"
+  //     pass: "nutriComNat"
   //   }),
   //   headers: {
   //     'Content-Type': 'application/json'
   //   }
-  // }).catch(error => {
-  //   console.error("Erro ao registrar pedido na planilha:", error);
   // });
 
-  let resposta = fetch('https://back-resumos-nutri-com-7fdrfjihk-andre-costas-projects.vercel.app/api/enviar-pedido.js', {
+  fetch('https://back-resumos-nutri-com-nat.vercel.app/', {
     method: 'POST',
     body: JSON.stringify({
       total: total.toFixed(2),
@@ -138,8 +138,15 @@ function finalizarPedido() {
     headers: {
       'Content-Type': 'application/json'
     }
+  })
+  .then(response => response.text())  // ou .json() se a API retorna JSON
+  .then(data => {
+    console.log("Resposta da API:", data);
+  })
+  .catch(error => {
+    console.error("Erro ao enviar requisição:", error);
   });
-  console.log("Resposta do servidor:", resposta.text());
+
 
 
 
@@ -179,7 +186,7 @@ function finalizarPedido() {
 
   setTimeout(() => {
     window.location.href = url;
-  }, 300); // aguarda 300 para garantir que o GA4 envie o evento
+  }, 500); // aguarda 500 para garantir que o GA4 envie o evento
 }
 
 
