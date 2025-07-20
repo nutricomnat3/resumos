@@ -17,16 +17,6 @@ function onEdit(e) {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 function doPost(e) {
   const SECRET_KEY = "nutriComNat@2025";
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Vendas");
