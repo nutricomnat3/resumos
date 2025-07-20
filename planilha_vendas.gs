@@ -17,23 +17,26 @@ function onEdit(e) {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 function doPost(e) {
   const SECRET_KEY = "nutriComNat@2025";
+  const USUARIO_CORRETO = "";
+  const SENHA_CORRETA = "";
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Vendas");
   const data = JSON.parse(e.postData.contents);
 
   if (!data.secret || data.secret !== SECRET_KEY) {
     return ContentService.createTextOutput("Acesso negado").setMimeType(ContentService.MimeType.TEXT);
+  }
+
+  let status = "PENDENTE";
+  let chamada = "WEBHOOK";
+
+  if (data.origem === "MANUAL") {
+    if (data.usuario !== USUARIO_CORRETO || data.senha !== SENHA_CORRETA) {
+      return ContentService.createTextOutput("Dados inválidos").setMimeType(ContentService.MimeType.TEXT);
+    }
+    status = "PAGO";
+    chamada = "MANUAL"
   }
 
   const valorFormatado = Number(data.total).toFixed(2).replace('.', ',');
@@ -63,53 +66,9 @@ function doPost(e) {
     new Date(),
     valorFormatado,
     data.pagamento || '',
-    "PENDENTE",
-    "WEBHOOK"
+    status,
+    chamada
   ]]);
-
-  return ContentService.createTextOutput("OK").setMimeType(ContentService.MimeType.TEXT);
-}
-
-function doPost(e) {
-  const SECRET_KEY = "nutriComNat@2025";
-  const USUARIO_CORRETO = "admin";
-  const SENHA_CORRETA = "1234";
-
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Vendas");
-  const data = JSON.parse(e.postData.contents);
-
-  if (!data.secret || data.secret !== SECRET_KEY) {
-    return ContentService.createTextOutput("Acesso negado").setMimeType(ContentService.MimeType.TEXT);
-  }
-
-  let status = "PENDENTE";
-
-  if (data.origem === "MANUAL") {
-    if (data.usuario !== USUARIO_CORRETO || data.senha !== SENHA_CORRETA) {
-      return ContentService.createTextOutput("Dados inválidos").setMimeType(ContentService.MimeType.TEXT);
-    }
-    status = "PAGO";
-  }
-
-  const dataAtual = new Date();
-  const valor = parseFloat(data.total.toString().replace(",", ".")).toFixed(2).replace(".", ",");
-
-  const ultimaLinha = sheet.getLastRow();
-  let proximaLinha = ultimaLinha + 1;
-
-  for (let i = 3; i <= ultimaLinha; i++) {
-    const dataCell = sheet.getRange(i, 2).getValue();
-    const valorCell = sheet.getRange(i, 3).getValue();
-    if (!dataCell && !valorCell) {
-      proximaLinha = i;
-      break;
-    }
-  }
-
-  sheet.getRange(proximaLinha, 2).setValue(dataAtual);
-  sheet.getRange(proximaLinha, 3).setValue(valor);
-  sheet.getRange(proximaLinha, 5).setValue(status);
-  sheet.getRange(proximaLinha, 4).setValue(data.pagamento);
 
   return ContentService.createTextOutput("OK").setMimeType(ContentService.MimeType.TEXT);
 }
