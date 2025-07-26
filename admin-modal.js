@@ -27,7 +27,7 @@ fetch('admin-modal.html')
         form.reset();
 
         try {
-          const resposta = await fetch('https://back-resumos-nutri-com-nat.vercel.app/', {
+          const resposta = await fetch('https://back-resumos-nutri-com-nat-theta.vercel.app/', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
