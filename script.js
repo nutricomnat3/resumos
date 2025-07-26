@@ -115,20 +115,7 @@ function finalizarPedido() {
 
   console.log("Start save to Google Sheets");
 
-
-  // fetch('https://back-resumos-nutri-com-nat.vercel.app/', {
-  //   method: 'POST',
-  //   body: JSON.stringify({
-  //     total: total.toFixed(2),
-  //     pagamento: formaPagamento === "Cartão de Crédito" ? "CREDITO (LINK)" : "PIX",
-  //     pass: "nutriComNat"
-  //   }),
-  //   headers: {
-  //     'Content-Type': 'application/json'
-  //   }
-  // });
-
-  fetch('https://back-resumos-nutri-com-nat.vercel.app/', {
+  fetch('https://back-resumos-nutri-com-nat-theta.vercel.app/', {
     method: 'POST',
     body: JSON.stringify({
       total: total.toFixed(2),
