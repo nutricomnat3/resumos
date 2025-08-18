@@ -348,4 +348,10 @@ body {
   .intro-logo img {
     max-width: 400px;
   }
+  
+  /* Feedback */
+  .carousel-item img {
+    height: 520px;
+    object-fit: cover;
+  }
 }

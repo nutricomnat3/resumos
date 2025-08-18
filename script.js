@@ -3,7 +3,7 @@
 let selectedResumos = [];
 let resumosData = [];
 
-console.log("NutriComNat - V.20250725.1")
+console.log("NutriComNat - V.20250818.1")
 
 fetch("src/data/data.json")
   .then(response => response.json())
@@ -112,7 +112,6 @@ function finalizarPedido() {
     
   });
 
-
   console.log("Start save to Google Sheets");
 
   fetch('https://back-resumos-nutri-com-nat-theta.vercel.app/', {
@@ -133,9 +132,6 @@ function finalizarPedido() {
   .catch(error => {
     console.error("Erro ao enviar requisição:", error);
   });
-
-
-
 
   console.log("End save to Google Sheets");
 
@@ -312,3 +308,54 @@ function mostrarResumoPedido() {
   }, 100);
 
 }
+
+
+function imgCarrossel() {
+  // Lista de imagens (simulando pasta)
+  // Basta colocar aqui os nomes das imagens que estiverem na pasta "img/"
+
+  const imagens = [
+    "!feedback_1.PNG",
+    "!feedback_2.PNG",
+    "!feedback_3.PNG"
+  ];
+
+  const indicators = document.getElementById("carouselIndicators");
+  const inner = document.getElementById("carouselInner");
+
+  imagens.forEach((img, index) => {
+    const ativo = index === 0 ? "active" : "";
+
+    // --- Indicadores ---
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.setAttribute("data-bs-target", "#meuCarrossel");
+    btn.setAttribute("data-bs-slide-to", index);
+    btn.className = index === 0 ? "active" : "";
+    btn.ariaCurrent = index === 0 ? "true" : "false";
+    btn.ariaLabel = `Slide ${index+1}`;
+    indicators.appendChild(btn);
+
+    // --- Slides ---
+    const div = document.createElement("div");
+    div.className = `carousel-item ${ativo}`;
+
+    const imgTag = document.createElement("img");
+    imgTag.src = "src/media/carrossel/" + img;
+    imgTag.className = "d-block w-100";
+    imgTag.alt = img;
+
+    div.appendChild(imgTag);
+
+    // --- Título (caso não comece com "!") ---
+    if (!img.startsWith("!")) {
+      const caption = document.createElement("div");
+      caption.className = "carousel-caption d-none d-md-block";
+      caption.innerHTML = `<h5>${img.replace(/\.[^/.]+$/, "")}</h5>`;
+      div.appendChild(caption);
+    }
+
+    inner.appendChild(div);
+  });
+}
+imgCarrossel()

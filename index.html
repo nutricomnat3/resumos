@@ -11,7 +11,16 @@
 
     <!-- JS Bootstrap com Popper (necessário para modal funcionar) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+    
+    <!-- Open Graph básico (usado pelo WhatsApp) -->
+    <meta property="og:title" content="Nutri com Nat">
+    <meta property="og:description" content="Estudante apaixonada por Nutrição.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nutricomnat3.github.io/resumos/">
+    <meta property="og:image" content="https://raw.githubusercontent.com/nutricomnat3/resumos/refs/heads/main/src/media/site/logo-nutricomnat.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="NutriComNat">
   </head>
 
   <!-- Google tag (gtag.js) -->
@@ -76,14 +85,34 @@
             Finalizar Pedido no WhatsApp
           </button>
         </div>
+
+        <br>
         <section class="text-center mb-5 px-3">
-          <h2 class="fw-semibold mb-3 text-final">Vem garantir os seus!!</h2>
-          <p class="fw-semibold mb-3 text-final2">
-            (na compra de + de 1 tem desconto de 10% em cada <br />
-            apostila adicionada e <br />
-            na compra de todas, o desconto é de 30%)
-          </p>
+          <h3>Feedback 💚:</h3>
+          <div id="meuCarrossel" class="carousel slide shadow rounded overflow-hidden"
+              data-bs-ride="carousel"
+              data-bs-interval="4000"
+              data-bs-pause="hover"
+              data-bs-wrap="true">
+
+            <!-- Indicadores dinâmicos -->
+            <div class="carousel-indicators" id="carouselIndicators"></div>
+
+            <!-- Slides dinâmicos -->
+            <div class="carousel-inner" id="carouselInner"></div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#meuCarrossel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#meuCarrossel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Próximo</span>
+            </button>
+          </div>
         </section>
+
         <div class="accordion" id="accordionPanelsStayOpenExample">
           <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -93,10 +122,10 @@
               </button>
             </h2>
             <div aria-labelledby="panelsStayOpen-headingOne" class="accordion-collapse collapse show"
-              id="panelsStayOpen-collapseOne">
-              <div class="accordion-body">
-                Meu nome é <strong>Natálya Caroline</strong>, tenho 21 anos, moro em Recife-PE e sou <strong>estudante de
-                  Nutrição</strong> do sétimo período. Crio resumos desde o início da faculdade como uma forma de tornar
+            id="panelsStayOpen-collapseOne">
+            <div class="accordion-body">
+              Meu nome é <strong>Natálya Caroline</strong>, tenho 21 anos, moro em Recife-PE e sou <strong>estudante de
+                Nutrição</strong> do sétimo período. Crio resumos desde o início da faculdade como uma forma de tornar
                 os estudos mais práticos, didáticos e eficientes para a memória. O que começou como uma estratégia pessoal
                 de aprendizado, hoje se transformou em um projeto que compartilho com vocês — com conteúdos pensados para
                 facilitar a sua rotina de estudos também!
@@ -106,15 +135,15 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
               <button aria-controls="panelsStayOpen-collapseTwo" aria-expanded="false" class="accordion-button collapsed"
-                data-bs-target="#panelsStayOpen-collapseTwo" data-bs-toggle="collapse" type="button">
-                Quais formas de pagamento?
-              </button>
-            </h2>
-            <div aria-labelledby="panelsStayOpen-headingTwo" class="accordion-collapse collapse"
-              id="panelsStayOpen-collapseTwo">
-              <div class="accordion-body">
-                <ul>
-                  <li><strong>Pix</strong></li>
+              data-bs-target="#panelsStayOpen-collapseTwo" data-bs-toggle="collapse" type="button">
+              Quais formas de pagamento?
+            </button>
+          </h2>
+          <div aria-labelledby="panelsStayOpen-headingTwo" class="accordion-collapse collapse"
+          id="panelsStayOpen-collapseTwo">
+          <div class="accordion-body">
+            <ul>
+              <li><strong>Pix</strong></li>
                   <li><strong>Cartão de Crédito</strong> *</li>
                 </ul>
 
@@ -123,26 +152,26 @@
 
                 * Pagamento através de link (InfinitePay) com acréscimo da própria maquininha virtual, e podendo ser
                 parcelado
-
+                
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingThree">
               <button aria-controls="panelsStayOpen-collapseThree" aria-expanded="false"
-                class="accordion-button collapsed" data-bs-target="#panelsStayOpen-collapseThree"
-                data-bs-toggle="collapse" type="button">
-                Como eu envio os arquivos após pagamento?
-              </button>
-            </h2>
-            <div aria-labelledby="panelsStayOpen-headingThree" class="accordion-collapse collapse"
-              id="panelsStayOpen-collapseThree">
-              <div class="accordion-body">
-                Assim que o pagamento for confirmado, o envio dos resumos é feito imediatamente, no mesmo minuto! Você
-                escolhe o canal que preferir para recebê-los — seja pelo WhatsApp, e-mail ou Telegram — e eu cuido de
-                entregar tudo rapidinho por lá.
-              </div>
-            </div>
+              class="accordion-button collapsed" data-bs-target="#panelsStayOpen-collapseThree"
+              data-bs-toggle="collapse" type="button">
+              Como eu envio os arquivos após pagamento?
+            </button>
+          </h2>
+          <div aria-labelledby="panelsStayOpen-headingThree" class="accordion-collapse collapse"
+          id="panelsStayOpen-collapseThree">
+          <div class="accordion-body">
+            Assim que o pagamento for confirmado, o envio dos resumos é feito imediatamente, no mesmo minuto! Você
+            escolhe o canal que preferir para recebê-los — seja pelo WhatsApp, e-mail ou Telegram — e eu cuido de
+            entregar tudo rapidinho por lá.
+          </div>
+        </div>
           </div>
         </div>
 
