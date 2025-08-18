@@ -3,7 +3,7 @@
 let selectedResumos = [];
 let resumosData = [];
 
-console.log("NutriComNat - V.20250818.1")
+console.log("NutriComNat - V.20250818.1") // Version
 
 fetch("src/data/data.json")
   .then(response => response.json())
@@ -315,9 +315,9 @@ function imgCarrossel() {
   // Basta colocar aqui os nomes das imagens que estiverem na pasta "img/"
 
   const imagens = [
-    "!feedback_1.PNG",
-    "!feedback_2.PNG",
-    "!feedback_3.PNG"
+    "!feedback_1.png",
+    "!feedback_2.png",
+    "!feedback_3.png"
   ];
 
   const indicators = document.getElementById("carouselIndicators");
