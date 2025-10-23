@@ -1,6 +1,16 @@
 {
     "resumos": [
         {
+            "title": "Nutribase: Aprenda nutrição do zero em +50 páginas.",
+            "description": "O Nutribase é um e-book que ensina nutrição do zero, com explicações simples e diretas sobre os principais temas da área. Ideal para quem quer compreender e dominar a nutrição de forma prática e leve. Aprenda desde macronutrientes, como montar um planejamento alimentar até doenças, suplementos e muito mais! 🤍",
+            "price_from": 59.90,
+            "price": 14.90,
+            "category": "nutribase",
+            "color": "#CDAD6F",
+            "image": "src/media/resumos/nutribase.jpeg",
+            "label": "nutribase"
+        },
+        {
             "title": "Guia - Como Dominar Nutrição de Verdade!",
             "description": "A faculdade te dá a teoria, mas não te ensina a aplicar. Esse e-book é um guia prático com tudo o que você precisa para dominar a nutrição de verdade e ter mais segurança. São mais de 30 páginas direto ao ponto, com linguagem simples e ứtil! Vem dominar nutrição! ❤️",
             "price_from": 39.90,
