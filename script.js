@@ -16,7 +16,8 @@ function renderResumos(resumos) {
   const container = document.getElementById("resumos-list");
   resumos.forEach(resumo => {
     const col = document.createElement("div");
-    col.className = "col-12 col-md-6 col-lg-4";
+    // col.className = "col-12 col-md-6 col-lg-4";
+    col.className = "col-6 col-lg-4";
 
     const card = document.createElement("div");
     card.className = "card-resumo";
