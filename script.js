@@ -20,8 +20,10 @@ function renderResumos(resumos) {
     col.className = "col-6 col-lg-4";
 
     const card = document.createElement("div");
-    card.className = "card-resumo";
+    // card.className = "card-resumo";
+    card.className = `card-resumo ${resumo.premium ? "premium" : ""}`;
     card.innerHTML = `
+      ${resumo.lancamento ? `<span class="badge-lancamento">Lançamento</span>` : ``}
       <img src="${resumo.image}" alt="${resumo.title}">
       <div class="card-body" style="background-color: ${resumo.color}">
         <h5 class="card-title">${resumo.title}</h5>

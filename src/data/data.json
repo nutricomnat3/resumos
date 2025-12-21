@@ -1,6 +1,18 @@
 {
     "resumos": [
         {
+            "title": "Descomplicando Nutrição nas férias: A base que ninguém te deu.",
+            "description": "O Descomplicando Nutrição é um e-book prático para estudantes de Nutrição que querem entender de verdade, sem decoreba. Em +30 páginas, você revisa os principais conteúdos da faculdade de forma leve e organizada em 30 dias, passando por fundamentos, metabolismo, avaliação nutricional, cálculos, doenças e suplementação. Perfeito para estudar nas férias e voltar mais confiante para o próximo semestre. 🤍",
+            "price_from": 39.90,
+            "price": 12.90,
+            "category": "descomplicando_nutricao",
+            "color": "#422811",
+            "image": "src/media/resumos/descomplicando_nutricao.jpeg",
+            "label": "descomplicando_nutricao",
+            "lancamento": true,
+            "premium": true
+        },
+        {
             "title": "Nutribase: Aprenda nutrição do zero em +50 páginas.",
             "description": "O Nutribase é um e-book que ensina nutrição do zero, com explicações simples e diretas sobre os principais temas da área. Ideal para quem quer compreender e dominar a nutrição de forma prática e leve. Aprenda desde macronutrientes, como montar um planejamento alimentar até doenças, suplementos e muito mais! 🤍",
             "price_from": 59.90,
@@ -8,7 +20,9 @@
             "category": "nutribase",
             "color": "#CDAD6F",
             "image": "src/media/resumos/nutribase.jpeg",
-            "label": "nutribase"
+            "label": "nutribase",
+            "lancamento": true,
+            "premium": true
         },
         {
             "title": "Guia - Como Dominar Nutrição de Verdade!",

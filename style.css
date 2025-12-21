@@ -355,3 +355,72 @@ body {
     object-fit: cover;
   }
 }
+
+
+
+/* Para o selo e o brilho funcionarem bem */
+.card-resumo{
+  position: relative;
+  overflow: hidden; /* garante que o brilho não saia do card */
+}
+
+/* ===== Selo LANÇAMENTO ===== */
+.badge-lancamento{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #111;
+  background: linear-gradient(90deg, #fff2b0, #ffd36a, #fff2b0);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+}
+
+/* ===== Premium: glitter dourado passando ===== */
+.card-resumo.premium::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index: 6;
+
+  background: linear-gradient(
+    100deg,
+    rgba(255,215,0,0) 0%,
+    rgba(255,215,0,0.18) 18%,
+    rgba(255,255,255,0.28) 28%,
+    rgba(255,215,0,0.18) 38%,
+    rgba(255,215,0,0) 60%
+  );
+
+  transform: translateX(-120%);
+  animation: premiumShine 2s ease-in-out infinite;
+  /* animation: premiumShine 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite; */
+  mix-blend-mode: screen;
+}
+
+@keyframes premiumShine{
+  0%   { transform: translateX(-120%); opacity: 0; }
+  15%  { opacity: 1; }
+  50%  { transform: translateX(120%); opacity: 1; }
+  65%  { opacity: .2; }
+  100% { transform: translateX(120%); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .card-resumo.premium::after{ animation:none; opacity:.2; transform:none; }
+}
+
+/* ===== Ajustes de fonte para MOBILE ===== */
+@media (max-width: 576px) {
+
+  .card-resumo .card-title{
+    font-size: 1.05rem;   /* diminui o título */
+    line-height: 1.25;
+  }
+
+}
