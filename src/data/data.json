@@ -176,7 +176,7 @@
             "category": "combo",
             "color": "#d4a055",
             "image": "src/media/resumos/combo_geral.jpeg",
-            "label": "resumo-combo-todos-os-resumos"
+            "label": "combo-todos-os-resumos"
         },
         {
             "title": "Combo Nutrição",
@@ -186,7 +186,7 @@
             "category": "combo",
             "color": "#91444b",
             "image": "src/media/resumos/combo_nutricao.jpeg",
-            "label": "resumo-combo-nutricao"
+            "label": "combo-nutricao"
         },
         {
             "title": "Combo Saúde",
@@ -196,7 +196,17 @@
             "category": "combo",
             "color": "#48768a",
             "image": "src/media/resumos/combo_saude.jpeg",
-            "label": "resumo-combo-saude"
+            "label": "combo-saude"
+        },
+        {
+            "title": "Combo Lançamentos",
+            "description": "O Combo Lançamentos inclui 4 arquivos completos: NutriBase, Descomplicando Nutrição, Questionário com 40 perguntas abertas e casos clínicos, e o Guia Como Dominar a Nutrição. Os materiais são enviados separadamente, pensados para te ajudar a entender a nutrição de forma clara, organizada e sem decoreba, do zero até a fixação prática. 📊 No total, são +130 páginas de conteúdo.",
+            "price_from": 49.90,
+            "price": 24.90,
+            "category": "combo",
+            "color": "#C91717",
+            "image": "src/media/resumos/combo_lancamentos.jpeg",
+            "label": "combo-lancamentos"
         }
     ]
 }
