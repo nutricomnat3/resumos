@@ -34,6 +34,20 @@
             "image": "src/media/resumos/guia_dominarNutricao.jpeg",
             "label": "guia-dominar-nutricao"
         },
+
+        {
+            "title": "Questionário - Descomplicando Nutrição",
+            "description": "Questionário Descomplicando Nutrição é um material de estudo com 24 páginas, composto por 40 questões abertas, elaboradas para promover compreensão real dos principais conteúdos da graduação em Nutrição. O material inclui explicações detalhadas e 10 casos clínicos, auxiliando o estudante a desenvolver raciocínio nutricional, integrar teoria e prática e se preparar melhor para provas e atendimentos futuros. 🤍",
+            "price_from": 15.90,
+            "price": 8.90,
+            "category": "questionario_descomplicando_nutricao",
+            "color": "#462A12",
+            "image": "src/media/resumos/questionario_descomplicando_nutricao.jpeg",
+            "label": "questionario_descomplicando_nutricao",
+            "lancamento": true,
+            "premium": true
+        },
+
         {
             "title": "Dietoterapia",
             "description": "Principais conceitos, estratégias terapêuticas e doenças com abordagem dietoterápica. Um resumo direto e objetivo para revisar os fundamentos da intervenção nutricional em diferentes condições clínicas.",
