@@ -1,6 +1,17 @@
 {
     "resumos": [
         {
+            "title": "Combo todos os resumos",
+            "description": "Garanta todos os resumos disponíveis no site por um preço incrível!",
+            "price_from": 185.90,
+            "price": 49.90,
+            "category": "combo",
+            "color": "#d4a055",
+            "image": "src/media/resumos/combo_geral.jpeg",
+            "label": "combo-todos-os-resumos"
+        },
+        
+        {
             "title": "Descomplicando Nutrição nas férias: A base que ninguém te deu.",
             "description": "O Descomplicando Nutrição é um e-book prático para estudantes de Nutrição que querem entender de verdade, sem decoreba. Em +30 páginas, você revisa os principais conteúdos da faculdade de forma leve e organizada em 30 dias, passando por fundamentos, metabolismo, avaliação nutricional, cálculos, doenças e suplementação. Perfeito para estudar nas férias e voltar mais confiante para o próximo semestre. 🤍",
             "price_from": 39.90,
@@ -168,16 +179,7 @@
             "image": "src/media/resumos/mapas_bioquimica.png",
             "label": "resumo-mapas-mentais-de-bioquimica"
         },
-        {
-            "title": "Combo todos os resumos",
-            "description": "Garanta todos os resumos disponíveis no site por um preço incrível!",
-            "price_from": 185.90,
-            "price": 49.90,
-            "category": "combo",
-            "color": "#d4a055",
-            "image": "src/media/resumos/combo_geral.jpeg",
-            "label": "combo-todos-os-resumos"
-        },
+
         {
             "title": "Combo Nutrição",
             "description": "Tenha acesso aos resumos de Introdução à Nutrição, Proteínas, Carboidratos, Lípideos, Vitaminas e Mapas Mentais de Bioquímica por um preço incrível!",
