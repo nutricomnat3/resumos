@@ -3,7 +3,7 @@
 let selectedResumos = [];
 let resumosData = [];
 
-console.log("NutriComNat - V.20260225.1") // Version
+console.log("NutriComNat - V.20260505.1") // Version
 
 fetch("src/data/data.json")
   .then(response => response.json())
@@ -112,7 +112,7 @@ function finalizarPedido() {
     produtos += `- *${resumo.title}* - R$ ${resumo.price.toFixed(2)}`;
     produtos += `%0A`;
     total += resumo.price;
-    
+
   });
 
   console.log("Start save to Google Sheets");
@@ -128,13 +128,13 @@ function finalizarPedido() {
       'Content-Type': 'application/json'
     }
   })
-  .then(response => response.text())  // ou .json() se a API retorna JSON
-  .then(data => {
-    console.log("Resposta da API:", data);
-  })
-  .catch(error => {
-    console.error("Erro ao enviar requisição:", error);
-  });
+    .then(response => response.text())  // ou .json() se a API retorna JSON
+    .then(data => {
+      console.log("Resposta da API:", data);
+    })
+    .catch(error => {
+      console.error("Erro ao enviar requisição:", error);
+    });
 
   console.log("End save to Google Sheets");
 
@@ -161,7 +161,7 @@ function finalizarPedido() {
   mensagem += `*Instagram:* instagram.com/natalyamirandanutri`;
   mensagem += `%0A`;
   mensagem += `*TikTok:* tiktok.com/@nutricomnat`;
-  
+
   const numero = "5581995101122";
   const url = `https://api.whatsapp.com/send?phone=${numero}&text=${mensagem}`;
   console.log(mensagem)
@@ -336,7 +336,7 @@ function imgCarrossel() {
     btn.setAttribute("data-bs-slide-to", index);
     btn.className = index === 0 ? "active" : "";
     btn.ariaCurrent = index === 0 ? "true" : "false";
-    btn.ariaLabel = `Slide ${index+1}`;
+    btn.ariaLabel = `Slide ${index + 1}`;
     indicators.appendChild(btn);
 
     // --- Slides ---

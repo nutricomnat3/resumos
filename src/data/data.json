@@ -1,10 +1,23 @@
 {
     "resumos": [
         {
+            "title": "Guia: Atendimento Nutricional",
+            "description": "O Guia de Atendimento Nutricional para Estudantes foi criado exatamente para isso: te tirar da insegurança e te preparar para a prática de verdade. Esse é um material direto ao ponto, pensado para te acompanhar nos atendimentos — principalmente em estágios — com tudo o que você precisa em um só lugar.",
+            "price_from": 39.90,
+            "price": 15.90,
+            "category": "guia_atendimento_nutricional",
+            "color": "#6C9131",
+            "image": "src/media/resumos/guia_atendimento_nutricional.jpeg",
+            "label": "guia_atendimento_nutricional",
+            "lancamento": true,
+            "premium": true
+        },
+
+        {
             "title": "Combo todos os resumos",
             "description": "Garanta todos os resumos disponíveis no site por um preço incrível!",
-            "price_from": 185.90,
-            "price": 49.90,
+            "price_from": 225.90,
+            "price": 55.90,
             "category": "combo",
             "color": "#d4a055",
             "image": "src/media/resumos/combo_geral.jpeg",
@@ -202,9 +215,9 @@
         },
         {
             "title": "Combo Lançamentos",
-            "description": "O Combo Lançamentos inclui 4 arquivos completos: NutriBase, Descomplicando Nutrição, Questionário com 40 perguntas abertas e casos clínicos, e o Guia Como Dominar a Nutrição. Os materiais são enviados separadamente, pensados para te ajudar a entender a nutrição de forma clara, organizada e sem decoreba, do zero até a fixação prática. 📊 No total, são +130 páginas de conteúdo.",
-            "price_from": 49.90,
-            "price": 24.90,
+            "description": "O Combo Lançamentos inclui 5 arquivos completos: NutriBase, Descomplicando Nutrição, Questionário com 40 perguntas abertas e casos clínicos, Guia Como Dominar a Nutrição e o Guia de Atendimento. Os materiais são enviados separadamente, pensados para te ajudar a entender a nutrição de forma clara, organizada e sem decoreba, do zero até a fixação prática. 📊 No total, são +160 páginas de conteúdo.",
+            "price_from": 69.90,
+            "price": 29.90,
             "category": "combo",
             "color": "#C91717",
             "image": "src/media/resumos/combo_lancamentos.jpeg",
