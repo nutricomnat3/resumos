@@ -23,7 +23,23 @@
             "image": "src/media/resumos/combo_geral.jpeg",
             "label": "combo-todos-os-resumos"
         },
+
         
+        {
+            "title": "Mapas Mentais - Nutrição",
+            "description": "+30 mapas mentais ilustrados para você aprender nutrição de forma visual, organizada e fácil de memorizar. 🤎 O material reúne os principais temas da faculdade, como metabolismo, carboidratos, proteínas, vitaminas, avaliação nutricional, doenças, suplementação e muito mais — tudo de forma didática e direta ao ponto. Perfeito para revisar conteúdos, estudar para provas e fortalecer sua base na nutrição. 💡",
+            "price_from": 35.90,
+            "price": 15.90,
+            "category": "mapas_mentais_nutricao",
+            "color": "#964A08",
+            "image": "src/media/resumos/mapas_mentais_nutricao.jpeg",
+            "label": "mapas_mentais_nutricao",
+            "lancamento": true,
+            "premium": true
+        },
+
+
+
         {
             "title": "Descomplicando Nutrição nas férias: A base que ninguém te deu.",
             "description": "O Descomplicando Nutrição é um e-book prático para estudantes de Nutrição que querem entender de verdade, sem decoreba. Em +30 páginas, você revisa os principais conteúdos da faculdade de forma leve e organizada em 30 dias, passando por fundamentos, metabolismo, avaliação nutricional, cálculos, doenças e suplementação. Perfeito para estudar nas férias e voltar mais confiante para o próximo semestre. 🤍",
@@ -215,7 +231,7 @@
         },
         {
             "title": "Combo Lançamentos",
-            "description": "O Combo Lançamentos inclui 5 arquivos completos: NutriBase, Descomplicando Nutrição, Questionário com 40 perguntas abertas e casos clínicos, Guia Como Dominar a Nutrição e o Guia de Atendimento. Os materiais são enviados separadamente, pensados para te ajudar a entender a nutrição de forma clara, organizada e sem decoreba, do zero até a fixação prática. 📊 No total, são +160 páginas de conteúdo.",
+            "description": "O Combo Lançamentos inclui 6 arquivos completos: NutriBase, Descomplicando Nutrição, Questionário com 40 perguntas abertas e casos clínicos, Guia Como Dominar a Nutrição, o Guia de Atendimento e os Mapas Mentais de Nutrição. Os materiais são enviados separadamente, pensados para te ajudar a entender a nutrição de forma clara, organizada e sem decoreba, do zero até a fixação prática. 📊 No total, são +200 páginas de conteúdo.",
             "price_from": 69.90,
             "price": 29.90,
             "category": "combo",
