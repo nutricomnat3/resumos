@@ -1,6 +1,28 @@
 {
     "resumos": [
         {
+            "title": "FlashCards Nutrição",
+            "description": "Aprenda Nutrição de forma ativa com mais de 30 flashcards organizados por temas essenciais. Estude revisando perguntas e respostas, fixe o conteúdo com mais facilidade e fortaleça sua base!",
+            "price_from": 29.90,
+            "price": 15.90,
+            "category": "FlashCards_nutricao",
+            "color": "#CD9E25",
+            "image": "src/media/resumos/FlashCards_nutricao.jpeg",
+            "label": "FlashCards_nutricao",
+            "lancamento": true,
+            "premium": true
+        },
+        {
+            "title": "Combo todos os resumos",
+            "description": "Garanta todos os resumos disponíveis no site por um preço incrível! Sendo 18 materiais pelo valor de 4! (Incluindo até os lançamentos)",
+            "price_from": 225.90,
+            "price": 49.90,
+            "category": "combo",
+            "color": "#d4a055",
+            "image": "src/media/resumos/combo_geral.jpeg",
+            "label": "combo-todos-os-resumos"
+        },
+        {
             "title": "Guia: Atendimento Nutricional",
             "description": "O Guia de Atendimento Nutricional para Estudantes foi criado exatamente para isso: te tirar da insegurança e te preparar para a prática de verdade. Esse é um material direto ao ponto, pensado para te acompanhar nos atendimentos — principalmente em estágios — com tudo o que você precisa em um só lugar.",
             "price_from": 39.90,
@@ -12,19 +34,6 @@
             "lancamento": true,
             "premium": true
         },
-
-        {
-            "title": "Combo todos os resumos",
-            "description": "Garanta todos os resumos disponíveis no site por um preço incrível!",
-            "price_from": 225.90,
-            "price": 49.90,
-            "category": "combo",
-            "color": "#d4a055",
-            "image": "src/media/resumos/combo_geral.jpeg",
-            "label": "combo-todos-os-resumos"
-        },
-
-        
         {
             "title": "Mapas Mentais - Nutrição",
             "description": "+30 mapas mentais ilustrados para você aprender nutrição de forma visual, organizada e fácil de memorizar. 🤎 O material reúne os principais temas da faculdade, como metabolismo, carboidratos, proteínas, vitaminas, avaliação nutricional, doenças, suplementação e muito mais — tudo de forma didática e direta ao ponto. Perfeito para revisar conteúdos, estudar para provas e fortalecer sua base na nutrição. 💡",
@@ -231,9 +240,9 @@
         },
         {
             "title": "Combo Lançamentos",
-            "description": "O Combo Lançamentos inclui 6 arquivos completos: NutriBase, Descomplicando Nutrição, Questionário com 40 perguntas abertas e casos clínicos, Guia Como Dominar a Nutrição, o Guia de Atendimento e os Mapas Mentais de Nutrição. Os materiais são enviados separadamente, pensados para te ajudar a entender a nutrição de forma clara, organizada e sem decoreba, do zero até a fixação prática. 📊 No total, são +200 páginas de conteúdo.",
-            "price_from": 69.90,
-            "price": 29.90,
+            "description": "O Combo Lançamentos inclui 7 arquivos completos: NutriBase, Descomplicando Nutrição, Questionário com 40 perguntas abertas e casos clínicos, Guia Como Dominar a Nutrição, o Guia de Atendimento, Mapas Mentais de Nutrição e os FlashCards. Os materiais são enviados separadamente, pensados para te ajudar a entender a nutrição de forma clara, organizada e sem decoreba, do zero até a fixação prática. 📊 No total, são quase 300 páginas de conteúdo.",
+            "price_from": 79.90,
+            "price": 30.00,
             "category": "combo",
             "color": "#C91717",
             "image": "src/media/resumos/combo_lancamentos.jpeg",
