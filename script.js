@@ -320,7 +320,8 @@ function imgCarrossel() {
   const imagens = [
     "!feedback_1.png",
     "!feedback_2.png",
-    "!feedback_3.png"
+    "!feedback_3.png",
+    "!feedback_4.jpeg"
   ];
 
   const indicators = document.getElementById("carouselIndicators");
@@ -346,6 +347,7 @@ function imgCarrossel() {
     const imgTag = document.createElement("img");
     imgTag.src = "src/media/carrossel/" + img;
     imgTag.className = "d-block w-100";
+    // imgTag.className = "w-102";
     imgTag.alt = img;
 
     div.appendChild(imgTag);
