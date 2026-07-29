@@ -224,7 +224,7 @@ a {
   position: relative;
   overflow: hidden;
   background: #eef3e8;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
 }
 
 .card-resumo img {
@@ -246,10 +246,8 @@ a {
   flex: 1;
   flex-direction: column;
   padding: 1.15rem;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.88)),
-    var(--resumo-color);
-  color: var(--text-color);
+  background: var(--resumo-color);
+  color: #ffffff;
 }
 
 .card-body::before {
@@ -266,14 +264,14 @@ a {
 .card-title {
   min-height: 3.2em;
   margin-bottom: 0.9rem;
-  color: #1d291f;
+  color: #ffffff;
   font-size: clamp(1.05rem, 2vw, 1.28rem);
   font-weight: 800;
   line-height: 1.28;
 }
 
 .card-text {
-  color: var(--muted-color);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -287,12 +285,12 @@ a {
 }
 
 .card-price .price-from {
-  color: #8a9488;
+  color: rgba(255, 255, 255, 0.72);
   font-size: 0.9rem;
 }
 
 .card-price .price-to {
-  color: var(--brand-green-dark);
+  color: #fffbe7;
   font-size: 1.18rem;
   font-weight: 900;
   white-space: nowrap;
@@ -676,7 +674,7 @@ a {
   }
 
   .card-media {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 9 / 16;
   }
 
   .card-body {

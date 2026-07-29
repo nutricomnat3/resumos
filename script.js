@@ -3,7 +3,7 @@
 let selectedResumos = [];
 let resumosData = [];
 
-console.log("NutriComNat - V.20260728.1") // Version
+console.log("NutriComNat - V.20260728.2") // Version
 
 fetch("src/data/data.json")
   .then(response => response.json())
