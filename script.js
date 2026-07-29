@@ -3,7 +3,7 @@
 let selectedResumos = [];
 let resumosData = [];
 
-console.log("NutriComNat - V.20260706.1") // Version
+console.log("NutriComNat - V.20260728.1") // Version
 
 fetch("src/data/data.json")
   .then(response => response.json())
@@ -24,19 +24,23 @@ function renderResumos(resumos) {
     card.className = `card-resumo ${resumo.premium ? "premium" : ""}`;
     card.innerHTML = `
       ${resumo.lancamento ? `<span class="badge-lancamento">Lançamento</span>` : ``}
-      <img src="${resumo.image}" alt="${resumo.title}">
-      <div class="card-body" style="background-color: ${resumo.color}">
+      <div class="card-media">
+        <img src="${resumo.image}" alt="${resumo.title}">
+      </div>
+      <div class="card-body" style="--resumo-color: ${resumo.color}">
         <h5 class="card-title">${resumo.title}</h5>
-        <button class="btn btn-light btn-sm mb-2" onclick="abrirModal('${resumo.title}', \`${resumo.description}\`, ${resumo.price_from}, ${resumo.price})">
-          Saber mais
-        </button>
         <p class="card-price">
-          <span class="price-from">De: <s>R$ ${resumo.price_from.toFixed(2)}</s></span><br>
+          <span class="price-from">De: <s>R$ ${resumo.price_from.toFixed(2)}</s></span>
           <span class="price-to">Por: R$ ${resumo.price.toFixed(2)}</span>
         </p>
-        <div class="form-check">
-          <input class="form-check-input resumo-check" type="checkbox" value="${resumo.label}" data-price="${resumo.price}" data-title="${resumo.title}" id="${resumo.label}">
-          <label class="form-check-label" for="${resumo.label}">Selecionar</label>
+        <div class="card-actions">
+          <button class="btn btn-light btn-sm btn-saber" onclick="abrirModal('${resumo.title}', \`${resumo.description}\`, ${resumo.price_from}, ${resumo.price})">
+            Saber mais
+          </button>
+          <div class="form-check select-pill">
+            <input class="form-check-input resumo-check" type="checkbox" value="${resumo.label}" data-price="${resumo.price}" data-title="${resumo.title}" id="${resumo.label}">
+            <label class="form-check-label" for="${resumo.label}">Selecionar</label>
+          </div>
         </div>
       </div>
     `;
