@@ -139,7 +139,8 @@ a {
 }
 
 .img-destaque {
-  width: min(100%, 900px);
+  /* width: min(70%, 900px); */
+  width: min(78vw, 360px);
   height: auto;
   border: 8px solid #ffffff;
   border-radius: 28px !important;

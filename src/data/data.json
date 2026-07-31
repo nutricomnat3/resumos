@@ -98,6 +98,19 @@
         },
 
         {
+            "title": "Fundamentos da Nutrição",
+            "description": "Fundamentos da Nutrição é um guia prático para aprender os conceitos essenciais da Nutrição de forma simples e organizada. Nele você encontra conteúdos como alimento e nutriente, funções dos nutrientes, alimentação saudável, Guia Alimentar, Leis de Escudero, áreas de atuação do nutricionista e muito mais. Isso em 10 páginas de conteúdo!",
+            "price_from": 29.90,
+            "price": 12.90,
+            "category": "nutricao",
+            "color": "#CF7982",
+            "image": "src/media/resumos/resumo_fundamentos_da_nutricao.jpeg",
+            "label": "resumo-introducao-a-nutricao",
+            "lancamento": true,
+            "premium": true
+        },
+
+        {
             "title": "Dietoterapia",
             "description": "Principais conceitos, estratégias terapêuticas e doenças com abordagem dietoterápica. Um resumo direto e objetivo para revisar os fundamentos da intervenção nutricional em diferentes condições clínicas.",
             "price_from": 29.90,
@@ -106,16 +119,6 @@
             "color": "#80B0CE",
             "image": "src/media/resumos/resumo_dietoterapia.png",
             "label": "resumo-dietoterapia"
-        },
-        {
-            "title": "Fundamentos da Nutrição",
-            "description": "Fundamentos da Nutrição é um guia prático para aprender os conceitos essenciais da Nutrição de forma simples e organizada. Nele você encontra conteúdos como alimento e nutriente, funções dos nutrientes, alimentação saudável, Guia Alimentar, Leis de Escudero, áreas de atuação do nutricionista e muito mais. Isso em 10 páginas de conteúdo!",
-            "price_from": 29.90,
-            "price": 12.90,
-            "category": "nutricao",
-            "color": "#CF7982",
-            "image": "src/media/resumos/resumo_fundamentos_da_nutricao.jpeg",
-            "label": "resumo-introducao-a-nutricao"
         },
         {
             "title": "Anatomia",
