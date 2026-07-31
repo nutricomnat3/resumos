@@ -108,13 +108,13 @@
             "label": "resumo-dietoterapia"
         },
         {
-            "title": "Introdução à Nutrição",
-            "description": "Essa apostila ilustrada e objetiva traz os principais temas que todo estudante precisa dominar: nutrientes, metabolismo, vitaminas, tipos de alimentos e muito mais — tudo em apenas 17 páginas organizadas e práticas.",
-            "price_from": 19.90,
-            "price": 11.90,
+            "title": "Fundamentos da Nutrição",
+            "description": "Fundamentos da Nutrição é um guia prático para aprender os conceitos essenciais da Nutrição de forma simples e organizada. Nele você encontra conteúdos como alimento e nutriente, funções dos nutrientes, alimentação saudável, Guia Alimentar, Leis de Escudero, áreas de atuação do nutricionista e muito mais. Isso em 10 páginas de conteúdo!",
+            "price_from": 29.90,
+            "price": 12.90,
             "category": "nutricao",
             "color": "#CF7982",
-            "image": "src/media/resumos/resumo_introducao_a_nutricao.jpg",
+            "image": "src/media/resumos/resumo_fundamentos_da_nutricao.jpeg",
             "label": "resumo-introducao-a-nutricao"
         },
         {
