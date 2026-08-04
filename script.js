@@ -3,7 +3,7 @@
 let selectedResumos = [];
 let resumosData = [];
 
-console.log("NutriComNat - V.20260721.1") // Version
+console.log("NutriComNat - V.20260804.1") // Version
 
 fetch("src/data/data.json")
   .then(response => response.json())
@@ -119,28 +119,29 @@ function finalizarPedido() {
 
   });
 
-  console.log("Start save to Google Sheets");
+  // console.log("Start save to Google Sheets");
 
-  fetch('https://back-resumos-nutri-com-nat-theta.vercel.app/', {
-    method: 'POST',
-    body: JSON.stringify({
-      total: total.toFixed(2),
-      pagamento: formaPagamento === "Cartão de Crédito" ? "CREDITO (LINK)" : "PIX",
-      pass: "nutriComNat"
-    }),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
-    .then(response => response.text())  // ou .json() se a API retorna JSON
-    .then(data => {
-      console.log("Resposta da API:", data);
-    })
-    .catch(error => {
-      console.error("Erro ao enviar requisição:", error);
-    });
+  // fetch('https://back-resumos-nutri-com-nat-theta.vercel.app/', {
+  //   method: 'POST',
+  //   body: JSON.stringify({
+  //     total: total.toFixed(2),
+  //     pagamento: formaPagamento === "Cartão de Crédito" ? "CREDITO (LINK)" : "PIX",
+  //     pass: "nutriComNat"
+  //   }),
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //   }
+  // })
+  //   .then(response => response.text())  // ou .json() se a API retorna JSON
+  //   .then(data => {
+  //     console.log("Resposta da API:", data);
+  //   })
+  //   .catch(error => {
+  //     console.error("Erro ao enviar requisição:", error);
+  //   });
 
-  console.log("End save to Google Sheets");
+  // console.log("End save to Google Sheets");
+
 
   mensagem = `${saudacao}`;
   mensagem += `%0A`;
@@ -158,6 +159,9 @@ function finalizarPedido() {
   } else {
     mensagem += `Forma de pagamento escolhida: *${formaPagamento}*`;
   }
+  mensagem += `%0A`;
+  mensagem += `%0A`;
+  mensagem += `OBS: *Não se preocupe, responderei a sua mensagem assim que eu estiver disponível no WhatsApp!* 🌼`;
   mensagem += `%0A`;
   mensagem += `%0A`;
   mensagem += `Minhas redes sociais ♥:`;
