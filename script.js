@@ -3,7 +3,7 @@
 let selectedResumos = [];
 let resumosData = [];
 
-console.log("NutriComNat - V.20260804.1") // Version
+console.log("NutriComNat - V.20261023.1") // Version
 
 fetch("src/data/data.json")
   .then(response => response.json())
@@ -220,7 +220,8 @@ function abrirModal(titulo, descricao, precoDe, precoPor) {
 
   modalTitle.innerText = titulo;
   modalContent.innerHTML = `
-    <p><strong>Descrição:</strong> ${descricao}</p>
+    <p><strong>Descrição:</strong></p>
+    <p>${descricao}</p>
     <p><strong>De:</strong> R$ ${precoDe.toFixed(2)}</p>
     <p><strong>Por:</strong> R$ ${precoPor.toFixed(2)}</p>
   `;

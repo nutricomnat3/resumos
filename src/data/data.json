@@ -13,6 +13,16 @@
             "premium": true
         },
         {
+            "title": "Cálculos Nutricionais",
+            "description": "📗 Guia de Cálculos Nutricionais. — Aprenda a realizar os principais cálculos utilizados na Nutrição, com fórmulas, explicações e exemplos práticos! São mais de 30 páginas para facilitar seus estudos, atendimentos e estágios. 💚",
+            "price_from": 29.90,
+            "price": 16.90,
+            "category": "guia_calculos_nutricionais",
+            "color": "#15481F",
+            "image": "src/media/resumos/guia_calculos_nutricionais.jpeg",
+            "label": "guia_calculos_nutricionais"
+        },
+        {
             "title": "Combo todos os resumos",
             "description": "Garanta todos os resumos disponíveis no site por um preço incrível! Sendo 18 materiais pelo valor de 4 resumos! (Incluindo até os lançamentos)",
             "price_from": 225.90,
