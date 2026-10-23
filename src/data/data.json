@@ -1,16 +1,24 @@
 {
     "resumos": [
         {
-            "title": "FlashCards Nutrição",
-            "description": "Aprenda Nutrição de forma ativa com mais de 30 flashcards organizados por temas essenciais. Estude revisando perguntas e respostas, fixe o conteúdo com mais facilidade e fortaleça sua base!",
-            "price_from": 29.90,
-            "price": 15.90,
-            "category": "FlashCards_nutricao",
-            "color": "#CD9E25",
-            "image": "src/media/resumos/FlashCards_nutricao.jpeg",
-            "label": "FlashCards_nutricao",
-            "lancamento": true,
-            "premium": true
+            "title": "Combo todos os resumos",
+            "description": "Garanta todos os resumos disponíveis no site por um preço incrível! Sendo 18 materiais pelo valor de 4 resumos! (Incluindo até os lançamentos)",
+            "price_from": 225.90,
+            "price": 49.90,
+            "category": "combo",
+            "color": "#d4a055",
+            "image": "src/media/resumos/combo_geral.jpeg",
+            "label": "combo-todos-os-resumos"
+        },
+        {
+            "title": "Combo Lançamentos",
+            "description": "O Combo Lançamentos inclui 8 arquivos completos: NutriBase, Descomplicando Nutrição nas Férias, Questionário de Revisão com mais de 40 questões e 10 casos clínicos, Guia Como Dominar Nutrição de Verdade, Guia de Atendimento Nutricional, Mapas Mentais de Nutrição, Flashcards e o novo Guia de Cálculos Nutricionais. — No total, são quase 350 páginas de conteúdo!",
+            "price_from": 85.90,
+            "price": 35.90,
+            "category": "combo",
+            "color": "#C91717",
+            "image": "src/media/resumos/combo_lancamentos.jpeg",
+            "label": "combo-lancamentos"
         },
         {
             "title": "Cálculos Nutricionais",
@@ -20,17 +28,9 @@
             "category": "guia_calculos_nutricionais",
             "color": "#15481F",
             "image": "src/media/resumos/guia_calculos_nutricionais.jpeg",
-            "label": "guia_calculos_nutricionais"
-        },
-        {
-            "title": "Combo todos os resumos",
-            "description": "Garanta todos os resumos disponíveis no site por um preço incrível! Sendo 18 materiais pelo valor de 4 resumos! (Incluindo até os lançamentos)",
-            "price_from": 225.90,
-            "price": 49.90,
-            "category": "combo",
-            "color": "#d4a055",
-            "image": "src/media/resumos/combo_geral.jpeg",
-            "label": "combo-todos-os-resumos"
+            "label": "guia_calculos_nutricionais",
+            "lancamento": true,
+            "premium": true
         },
         {
             "title": "Guia: Atendimento Nutricional",
@@ -56,9 +56,6 @@
             "lancamento": true,
             "premium": true
         },
-
-
-
         {
             "title": "Descomplicando Nutrição nas férias: A base que ninguém te deu.",
             "description": "O Descomplicando Nutrição é um e-book prático para estudantes de Nutrição que querem entender de verdade, sem decoreba. Em +30 páginas, você revisa os principais conteúdos da faculdade de forma leve e organizada em 30 dias, passando por fundamentos, metabolismo, avaliação nutricional, cálculos, doenças e suplementação. Perfeito para estudar nas férias e voltar mais confiante para o próximo semestre. 🤍",
@@ -119,7 +116,18 @@
             "lancamento": true,
             "premium": true
         },
-
+        {
+            "title": "FlashCards Nutrição",
+            "description": "Aprenda Nutrição de forma ativa com mais de 30 flashcards organizados por temas essenciais. Estude revisando perguntas e respostas, fixe o conteúdo com mais facilidade e fortaleça sua base!",
+            "price_from": 29.90,
+            "price": 15.90,
+            "category": "FlashCards_nutricao",
+            "color": "#CD9E25",
+            "image": "src/media/resumos/FlashCards_nutricao.jpeg",
+            "label": "FlashCards_nutricao",
+            "lancamento": true,
+            "premium": true
+        },
         {
             "title": "Dietoterapia",
             "description": "Principais conceitos, estratégias terapêuticas e doenças com abordagem dietoterápica. Um resumo direto e objetivo para revisar os fundamentos da intervenção nutricional em diferentes condições clínicas.",
@@ -250,16 +258,6 @@
             "color": "#48768a",
             "image": "src/media/resumos/combo_saude.jpeg",
             "label": "combo-saude"
-        },
-        {
-            "title": "Combo Lançamentos",
-            "description": "O Combo Lançamentos inclui 7 arquivos completos: NutriBase, Descomplicando Nutrição, Questionário com 40 perguntas abertas e casos clínicos, Guia Como Dominar a Nutrição, o Guia de Atendimento, Mapas Mentais de Nutrição e os FlashCards. Os materiais são enviados separadamente, pensados para te ajudar a entender a nutrição de forma clara, organizada e sem decoreba, do zero até a fixação prática. 📊 No total, são quase 300 páginas de conteúdo.",
-            "price_from": 79.90,
-            "price": 30.00,
-            "category": "combo",
-            "color": "#C91717",
-            "image": "src/media/resumos/combo_lancamentos.jpeg",
-            "label": "combo-lancamentos"
         }
     ]
 }
